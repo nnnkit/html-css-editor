@@ -15,9 +15,8 @@ class Preview extends React.Component {
   }
 
   showPreview = () => {
-    console.log(this.preview.current);
     if (this.preview.current) {
-      let { xml, css, javascript } = this.props;
+      let { xml, css } = this.props;
       let document = this.preview.current.contentWindow.document;
       let style = document.createElement("style");
       style.innerText = css;
@@ -35,6 +34,7 @@ class Preview extends React.Component {
           </p>
         </div>
         <iframe
+          title="HTML/CSS Preview"
           ref={this.preview}
           id="code_result"
           width="100%"

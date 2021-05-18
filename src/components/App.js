@@ -14,7 +14,7 @@ class App extends React.Component {
   };
 
   render() {
-    let { xml, css, javascript } = this.state;
+    let { xml, css } = this.state;
     return (
       <div className="view">
         <Header />
